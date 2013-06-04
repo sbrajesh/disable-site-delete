@@ -49,8 +49,8 @@ class Fused_Disable_Site_Delete_Helper{
      * Load the localization file
      */
     function load_localization(){
-        
-        load_plugin_textdomain('disable-delete-site', false, dirname(plugin_basename(__FILE__)) . '/languages/');
+         $mofile=plugin_dir_path(__FILE__).'/languages/'.get_locale().'.mo';
+         load_textdomain( 'disable-delete-site', $mofile);
     }
     
     /**
